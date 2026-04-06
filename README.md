@@ -192,6 +192,6 @@ Top Recommendations:
 
 ## ⭐ Conclusion
 
-This project demonstrates how Machine Learning can be used to build an intelligent recommendation system by combining text processing, similarity measures, and clustering techniques.
+This project demonstrates how Machine Learning can be used to build an intelligent recommendation system by combining text processing, similarity measures, and clustering  techniques.
 
 ---
