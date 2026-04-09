@@ -1,197 +1,95 @@
-# 🍽️ Recipe Recommendation System (RCCIPR Project)
+# 🍽️ Recipe Recommendation System  
 
-## 📌 Overview
-
-The **Recipe Recommendation System** is a Machine Learning project that suggests recipes to users based on ingredients, cuisine, and cooking time.
-It uses multiple ML techniques like **TF-IDF, KNN, Cosine Similarity, and K-Means Clustering** to provide accurate and personalized recommendations.
+A machine learning-based system that recommends recipes based on ingredients, cuisine type, and cooking time using similarity measures and classification techniques.
 
 ---
 
-## 🎯 Objectives
+## 📌 Features  
 
-* Recommend recipes based on:
-
-  * Similar ingredients
-  * Cuisine type
-  * Cooking time
-* Provide multiple recommendation approaches:
-
-  * Recipe-based
-  * Cluster-based
-  * Custom input-based
-* Visualize recipe clusters using PCA
+- Recommend recipes using recipe name  
+- Custom recommendations using ingredients + cuisine + time  
+- Uses Cosine Similarity & Euclidean Distance  
+- Predicts cuisine using KNN Classifier  
+- Uses PCA for dimensionality reduction  
+- Groups recipes using K-Means Clustering  
 
 ---
 
-## 🧠 Machine Learning Concepts Used
+## 📦 Package Requirements  
 
-* **TF-IDF (Term Frequency – Inverse Document Frequency)**
-* **One-Hot Encoding (for cuisine)**
-* **MinMax Scaling (for cooking time)**
-* **Cosine Similarity & Euclidean Distance**
-* **K-Nearest Neighbors (KNN)**
-* **K-Means Clustering**
-* **Principal Component Analysis (PCA)**
+Install the following Python libraries:
 
----
+pip install pandas numpy scikit-learn scipy
 
-## 📂 Dataset
-
-The dataset contains recipe information with the following columns:
-
-* `name` → Recipe name
-* `ingredients` → List of ingredients
-* `cuisine` → Type of cuisine
-* `time` → Cooking time (in minutes)
+### Required Libraries:
+- pandas  
+- numpy  
+- scikit-learn  
+- scipy  
+- os (built-in)  
+- warnings (built-in)  
 
 ---
 
-## ⚙️ Project Workflow
+## 📂 Dataset  
 
-1. **Data Preprocessing**
+- File name: ml_recipes.csv  
+- Contains:
+  - Recipe Name  
+  - Ingredients  
+  - Cuisine Type  
+  - Cooking Time  
 
-   * Handle missing values
-   * Clean text data
-   * Normalize cooking time
-
-2. **Feature Engineering**
-
-   * Convert ingredients → TF-IDF vectors
-   * Encode cuisine → One-hot encoding
-   * Scale time → MinMaxScaler
-
-3. **Model Building**
-
-   * Compute similarity matrices
-   * Apply KNN for recommendations
-   * Perform K-Means clustering
-
-4. **Recommendation System**
-
-   * By recipe name
-   * By custom user input
-   * By cluster similarity
-
-5. **Visualization**
-
-   * PCA for 2D cluster visualization
+Custom dataset was generated using a Large Language Model (Claude AI).
 
 ---
 
-## 🚀 Features
+## ▶️ Run Instructions  
 
-✔ Recommend recipes based on similar dishes
-✔ Custom input-based recommendations
-✔ Cluster-based suggestions
-✔ Interactive CLI interface
-✔ PCA visualization of clusters
+Step 1: Clone the repository  
+git clone https://github.com/Hariom-Jangir/ml-project.git  
+cd ml-project  
 
----
+Step 2: Place dataset  
+Make sure ml_recipes.csv is in the same folder as the code  
 
-## 🖥️ How to Run
+Step 3: Run the project  
 
-### 1. Install dependencies
+For Python file:
+python your_file_name.py  
 
-```bash
-pip install pandas numpy scikit-learn matplotlib
-```
-
-### 2. Place dataset
-
-Ensure your dataset file is named:
-
-```
-ml_recipe.csv
-```
-
-### 3. Run the program
-
-```bash
-python your_script_name.py
-```
+For Jupyter Notebook:
+jupyter notebook  
+Then open .ipynb file and run all cells  
 
 ---
 
-## 🎮 Usage
+## ⚙️ How It Works  
 
-Choose from the menu:
-
-1. Recommend by recipe name
-2. Recommend using custom ingredients
-3. Cluster-based recommendation
-4. Exit
-
----
-
-## 📊 Example Input
-
-**Custom Input:**
-
-```
-Ingredients: chicken garlic butter
-Cuisine: indian
-Time: 30
-```
-
-**Output:**
-
-```
-Top Recommendations:
-- Butter Chicken
-- Chicken Curry
-- Chicken Tikka
-```
+1. Load and preprocess dataset  
+2. Convert ingredients into vectors using TF-IDF  
+3. Encode cuisine using One-Hot Encoding  
+4. Normalize cooking time using Min-Max Scaling  
+5. Reduce dimensions using PCA  
+6. Apply:
+   - KNN for classification  
+   - K-Means for clustering  
+7. Generate recommendations using:
+   - Cosine Similarity  
+   - Euclidean Distance  
 
 ---
 
-## 📈 Output Visualization
+## 📊 Output  
 
-* PCA scatter plot showing recipe clusters
-* Saved as: `cluster_pca.png`
-
----
-
-## 🏆 Advantages
-
-* Handles large ingredient datasets
-* Provides multiple recommendation strategies
-* Easy to extend and scale
+- Top 5 similar recipes are displayed  
+- Shows:
+  - Recipe name  
+  - Cuisine  
+  - Cooking time  
+  - Similarity score  
 
 ---
 
-## ⚠️ Limitations
 
-* Depends on dataset quality
-* No real-time user feedback learning
-* Limited to available cuisines
 
----
-
-## 🔮 Future Improvements
-
-* Add user ratings and feedback
-* Build web interface using Streamlit
-* Use deep learning for better recommendations
-* Integrate real-world APIs
-
----
-
-## 👨‍💻 Author
-
-* Dhruv
-
----
-
-## 📚 References
-
-* Scikit-learn documentation
-* Machine Learning course materials
-* Online datasets (Kaggle)
-
----
-
-## ⭐ Conclusion
-
-This project demonstrates how Machine Learning can be used to build an intelligent recommendation system by combining text processing, similarity measures, and clustering  techniques.
-
----
